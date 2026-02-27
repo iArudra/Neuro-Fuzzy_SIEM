@@ -1,0 +1,40 @@
+# System Architecture
+
+The Adaptive Neuro-Fuzzy Risk Scoring system follows a layered architecture to transform raw Windows Event Logs into prioritized security alerts.
+
+```text
+                ┌──────────────────────┐
+                │ Windows Event Logs   │
+                └──────────┬───────────┘
+                           │
+                ┌──────────▼───────────┐
+                │ Preprocessing Layer  │
+                │ Feature Extraction   │
+                └──────────┬───────────┘
+                           │
+                ┌──────────▼───────────┐
+                │ Neural Encoder       │
+                │ (Dense/LSTM/Transf)  │
+                └──────────┬───────────┘
+                           │
+                ┌──────────▼───────────┐
+                │ Neuro-Fuzzy Layer    │
+                │ (Adaptive MF + Rules)│
+                └──────────┬───────────┘
+                           │
+                ┌──────────▼───────────┐
+                │ Risk Scoring Engine  │
+                └──────────┬───────────┘
+                           │
+                ┌──────────▼───────────┐
+                │ SIEM Alert Manager   │
+                └──────────────────────┘
+```
+
+## Layer Descriptions
+
+1.  **Preprocessing Layer**: Handles log ingestion, normalization, and feature extraction (categorical and numerical metrics).
+2.  **Neural Encoder**: A deep learning component (e.g., Dense, LSTM, or Transformer) that learns efficient feature representations from the preprocessed data.
+3.  **Neuro-Fuzzy Layer**: Uses the neural representations to perform fuzzy inference. It adapts Membership Functions (MF) and rules based on training data.
+4.  **Risk Scoring Engine**: Aggregates the fuzzy outputs into a continuous risk score (0-100).
+5.  **SIEM Alert Manager**: Prioritizes alerts and interfaces with the dashboard for real-time monitoring.
