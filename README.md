@@ -38,7 +38,7 @@ This project implements a novel **Adaptive Neuro-Fuzzy Inference System (ANFIS)*
 - **Visualization**: An interactive SIEM dashboard for monitoring and response.
 
 ## Architecture
-Detailed architecture specifications can be found in the [Architecture](Architecture) file. (Work in Progress)
+Detailed architecture specifications can be found in the [Architecture](Architecture) file.
 
 ## Getting Started
 (Instructions to be added as implementation progresses)
