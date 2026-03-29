@@ -1,0 +1,29 @@
+# Python Virtual Environment
+.venv/
+env/
+venv/
+ENV/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Datasets and Large Files
+dataset/
+*.pkl
+*.pth
+archive.zip
+
+# Frontend Node Modules
+frontend/node_modules/
+frontend/dist/
+
+# SQLite Database
+*.db
+backend/siem_dashboard.db
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
